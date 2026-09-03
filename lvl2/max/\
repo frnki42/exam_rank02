@@ -1,0 +1,22 @@
+int	max(int* tab, unsigned int len)
+{
+	int	max;
+
+	max = 0;
+	while (--len)
+	{
+		if (max < tab[len])
+			max = tab[len];
+	}
+	return (max);
+}
+
+#include <stdio.h>
+
+int	main()
+{
+	int	*tab = {0, 420, 13, 18};
+	int	len = 4;
+	
+	printf("max(tab, len) returns: %i\n", max(tab, len));
+}
